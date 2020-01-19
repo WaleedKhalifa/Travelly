@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  background-color: rgb(17, 23, 34);
+  color: white;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#logo {
+  font-family: "Pattaya", sans-serif;
+  font-size: 2rem;
+  flex: 1 1 40rem;
+}
+
+nav ul {
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 2rem;
+}
+
+.first {
+  min-height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/landing-page.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first h2 {
+  padding: 4rem;
+  text-align: center;
+}
+
+.first button {
+  border: none;
+  background-color: rgb(17, 23, 34);
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  transition: background 0.5s ease-in-out;
+}
+
+.first button:hover{
+    background-color: rgb(39, 76, 146);
+
+}
+
+/* city section */
+
+.city {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/new-york-page.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.city div {
+  width: 90%;
+  margin: auto;
+}
+.city h1 {
+  text-decoration: underline;
+}
+
+.moving-cloud1 {
+    z-index: 0;
+    position: absolute;
+    top: -10%;
+    right: -40%;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: cloudAnimation 4s ease-in-out alternate infinite;
+}
+
+.moving-cloud2 {
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    right: -40%;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: cloudAnimation 4s ease-in-out alternate infinite;
+}
+
+
+@keyframes cloudAnimation{
+    from{
+        transform: translate(0%,0%)
+    }to{
+        transform: translate(-10%,0%)
+    }
+}
+
+@media screen and (max-width: 895px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 1rem;
+  }
+}
